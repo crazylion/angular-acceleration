@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li ng-repeat="panel in panels" ng-click="active($index)">{{panel.panelTitle}}</li>
+    </ul>
+    <div>
+        <div ng-transclude></div>
+    </div>
+</div>
