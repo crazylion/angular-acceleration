@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+        <meta http-equiv="X-UA-Compatible" content="chrome=1" /> 
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+        <script src="directive/aatab.js"></script>
+    </head>
+    <body ng-app="test">
+        <aa-tab>
+            <!-- ajax content -->
+            <aa-panel  panel-title="tabTitle1" pane-url="url">tab1</aa-panel>
+            <!-- 變換內容在另外一個div -->
+            <aa-panel  panel-title="tabTitle2"  pane-id="tbaId">tab2</aa-panel>
+            <!-- inline content -->
+            <aa-panel panel-title="tabTitle3">html  tabContent</aa-panel>
+        
+        </aa-tab> 
+    
+        <script>
+            angular.module('test', ['aa.tabs']);
+        </script>
+    </body>
+</html>
