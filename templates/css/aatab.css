@@ -1,0 +1,37 @@
+/*aaTab angular css*/
+#aa-tab-wrapper .aa-title-wrapper {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #eee;
+  margin: 0;
+}
+#aa-tab-wrapper .aa-title-wrapper .aa-tab-title {
+  float: left;
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+}
+#aa-tab-wrapper .aa-title-wrapper .aa-tab-title:hover, #aa-tab-wrapper .aa-title-wrapper .aa-tab-title:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+#aa-tab-wrapper .aa-title-wrapper .aa-tab-title.active {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  margin-bottom: -1px;
+}
+#aa-tab-wrapper .aa-contents-wrapper .aa-tab-content .tab-content {
+  margin: 20px;
+}

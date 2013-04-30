@@ -1,8 +1,8 @@
-<div>
-    <ul>
-        <li ng-repeat="panel in panels" ng-click="active($index)">{{panel.panelTitle}}</li>
+<div id="aa-tab-wrapper">
+    <ul class="aa-title-wrapper">
+        <li class="aa-tab-title" ng-repeat="panel in panels" ng-click="active($index)">{{panel.panelTitle}}</li>
     </ul>
-    <div>
-        <div ng-transclude></div>
+    <div class="aa-contents-wrapper">
+        <div class="aa-tab-content" ng-transclude></div>
     </div>
 </div>
