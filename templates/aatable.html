@@ -1,0 +1,16 @@
+<table>
+    <THEAD>
+        <tr>
+            <th ng-repeat="row in headerData">
+                <a href="#" ng-click="setOrderByKey(row['key'])">
+                    {{row['label']}}
+                </a>
+                </th>
+        </tr>
+    </THEAD>
+    <tbody>
+        <tr ng-repeat ="row in bodyData | orderBy:orderByKey:reverse">
+            <td ng-repeat="(key,value) in row">{{value}}</td> 
+        </tr>
+    </tbody>
+</table>
