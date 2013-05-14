@@ -6,7 +6,6 @@ angular.module('aa.table', [])
         restrict:"E",
         controller:function($scope){
             $scope.setOrderByKey=function(key){
-                console.log("set");
                 $scope.orderByKey=key; 
                 $scope.reverse=!$scope.reverse;
             }
