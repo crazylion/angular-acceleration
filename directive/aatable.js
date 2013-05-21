@@ -28,12 +28,14 @@ angular.module('aa.table', [])
                                 key: $scope.header[i]
                             }); 
                         }
-                        for(var i=0;i<$scope.data.length;i++){
-                            var item={};
-                            for(var j=0;j<$scope.data[i].length;j++){
-                                item[$scope.headerData[j].key]= $scope.data[i][j];
+                        if($scope.data!=null){
+                            for(var i=0;i<$scope.data.length;i++){
+                                var item={};
+                                for(var j=0;j<$scope.data[i].length;j++){
+                                    item[$scope.headerData[j].key]= $scope.data[i][j];
+                                }
+                                $scope.bodyData.push(item);
                             }
-                            $scope.bodyData.push(item);
                         }
                     }
                 
