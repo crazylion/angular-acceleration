@@ -15,28 +15,31 @@ angular.module('aa.table', [])
             $scope.bodyData=[];
             $scope.orderByKey="";
             $scope.reverse=false;
-            if($scope.isHash){
-                $scope.headerData = $scope.header;
-                $scope.bodyData = $scope.data;
-                
-            }else{
-                if($scope.header){
-                    for(var i=0;i<$scope.header.length;i++){
-                        $scope.headerData.push({
-                            label: $scope.header[i],
-                            key: $scope.header[i]
-                        }); 
-                    }
-                    for(var i=0;i<$scope.data.length;i++){
-                        var item={};
-                        for(var j=0;j<$scope.data[i].length;j++){
-                            item[$scope.headerData[j].key]= $scope.data[i][j];
+            $scope.$watch("data",function(){
+                if($scope.isHash){
+                    $scope.headerData = $scope.header;
+                    $scope.bodyData = $scope.data;
+                    
+                }else{
+                    if($scope.header){
+                        for(var i=0;i<$scope.header.length;i++){
+                            $scope.headerData.push({
+                                label: $scope.header[i],
+                                key: $scope.header[i]
+                            }); 
                         }
-                        $scope.bodyData.push(item);
+                        for(var i=0;i<$scope.data.length;i++){
+                            var item={};
+                            for(var j=0;j<$scope.data[i].length;j++){
+                                item[$scope.headerData[j].key]= $scope.data[i][j];
+                            }
+                            $scope.bodyData.push(item);
+                        }
                     }
+                
                 }
             
-            }
+            });
         }
     };
 });
